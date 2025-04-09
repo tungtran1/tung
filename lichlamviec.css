@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f7f0;
+    /* Màu nền nhạt, tông xanh lá nhẹ */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+.container h1 {
+    font-size: 2.5rem;
+    color: #1380ec;
+    /* Màu xanh lá đậm cho tiêu đề */
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1a7dc0;
+    /* Đường viền dưới màu  */
+    padding-bottom: 10px;
+}
+
+/* Đoạn văn giới thiệu */
+.container>p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Phần lịch làm việc */
+.schedule {
+    margin-bottom: 30px;
+}
+
+.schedule h2 {
+    font-size: 1.8rem;
+    color: #1287bc;
+    /* Màu xanh lá đậm */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Bảng lịch làm việc */
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule table th,
+.schedule table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.schedule table th {
+    background-color: #1772c7;
+    /* Màu xanh lá cho tiêu đề bảng */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.schedule table td {
+    font-size: 1rem;
+    color: #333;
+}
+
+.schedule table tr:nth-child(even) {
+    background-color: #e8f5e9;
+    /* Màu xanh lá nhạt cho các hàng chẵn */
+}
+
+.schedule table tr:hover {
+    background-color: #c8e6c9;
+    /* Màu xanh lá nhạt hơn khi hover */
+}
+
+/* Phần lưu ý */
+.notes h2 {
+    font-size: 1.8rem;
+    color: #0fa4d6;
+    /* Màu xanh lá đậm */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.notes ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.notes ul li {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.notes ul li::before {
+    content: "✔";
+    color: #1eb6c7;
+    /* Màu xanh lá cho dấu check */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .schedule h2,
+    .notes h2 {
+        font-size: 1.5rem;
+    }
+
+    .schedule table th,
+    .schedule table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .container>p,
+    .notes ul li {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>THPT NGÔ THỜI  NHIỆM </title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="ntn.jpg" alt="Logo Trường">
+            <div class="company-info">
+                <h1>THPT NGÔ THỜI NHIỆM</h1>
+            </div>
+        </div>
+
+        <!-- Menu Điều Hướng -->
+        <div class="nav">
+            <ul class="menu">
+                <li><a href="#" onclick="showHome(event)">Trang Chủ |</a></li>
+                <li><a href="#" onclick="loadPage(event, 'gioithieu.html')">Giới Thiệu |</a></li>
+                <li><a href="#" onclick="loadPage(event, 'lichlamviec.html')">Lịch Làm Việc |</a></li>
+                <li><a href="#" onclick="loadPage(event, 'gopy.html')">Góp Ý |</a></li>
+                <li><a href="#" onclick="loadPage(event, 'hoidap.html')">Hỏi & Đáp |</a></li>
+            </ul>
+            <div class="nav-right">
+                <ul class="language">
+                    <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+                    <li><a href="#" onclick="changeLanguage('vi')">Tiếng Việt</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phần Giới Thiệu (Mặc định) -->
+        <div id="intro">
+            <h2>Chào Mừng Đến Với THPT NGÔ Thời Nhiệm</h2>
+            <p>
+                Trường THPT Ngô Thời Nhiệm là nơi hội tụ của tri thức, nhân cách và khát vọng vươn lên. Với hơn 25 năm hình thành và phát triển, nhà trường đã và đang khẳng định vị thế là một trong những hệ thống trường phổ thông ngoài công lập uy tín tại Việt Nam.
+
+Với phương châm “Tâm huyết – Trách nhiệm – Kỷ cương – Chất lượng”, THPT Ngô Thời Nhiệm không ngừng đổi mới phương pháp giảng dạy, đầu tư cơ sở vật chất hiện đại, xây dựng môi trường học tập thân thiện, sáng tạo và hiệu quả.
+            </p>
+        </div>
+
+        <!-- Iframe để hiển thị nội dung khi nhấn menu -->
+        <iframe id="contentFrame" src="" width="100%" height="600px" style="border:none; display: none;"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        FPT Polytechnic © 2017. All rights reserved.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Đặt lại trạng thái khi trang được tải
+        window.onload = function () {
+            document.getElementById("contentFrame").style.display = "none";
+            document.getElementById("intro").style.display = "block";
+        };
+
+        function loadPage(event, page) {
+            event.preventDefault(); // Ngăn chặn tải trang mới
+
+            // Ẩn phần intro và hiển thị iframe
+            document.getElementById("intro").style.display = "none";
+            let iframe = document.getElementById("contentFrame");
+            iframe.style.display = "block";
+            iframe.src = page;
+        }
+
+        function showHome(event) {
+            event.preventDefault(); // Ngăn chặn tải trang mới
+
+            // Ẩn iframe và hiển thị phần intro
+            document.getElementById("contentFrame").style.display = "none";
+            document.getElementById("intro").style.display = "block";
+        }
+
+        function changeLanguage(language) {
+            alert('Language changed to ' + language);
+        }
+    </script>
+</body>
+
+</html>

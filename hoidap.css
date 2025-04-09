@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f7f0;
+    /* Màu nền nhạt, tông xanh lá nhẹ */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+.container h1 {
+    font-size: 2.5rem;
+    color: #006aff;
+    /* Màu xanh lá đậm cho tiêu đề */
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #06cdf0;
+    /* Đường viền dưới màu xanh lá */
+    padding-bottom: 10px;
+}
+
+/* Đoạn văn giới thiệu */
+.container>p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* FAQ Section */
+.faq .item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.faq .item h3 {
+    font-size: 1.2rem;
+    color: #18a6da;
+    /* Màu xanh lá đậm */
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.faq .item h3:hover {
+    color: #1d94ef;
+    /* Màu xanh lá nhạt hơn khi hover */
+}
+
+.faq .item p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    display: none;
+    /* Ẩn nội dung câu trả lời mặc định */
+    padding: 10px 0;
+}
+
+.faq .item.active p {
+    display: block;
+    /* Hiển thị nội dung khi mục được mở */
+}
+
+/* Định dạng cho các phần tử strong (email, số điện thoại) */
+strong {
+    color: #d32f2f;
+    /* Màu đỏ để nổi bật */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container>p {
+        font-size: 1rem;
+    }
+
+    .faq .item h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq .item p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hoidap.css">
+    <title>Hỏi & Đáp - THPT Mỹ Hương</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HỎI & ĐÁP</h1>
+        <p>Đây là những câu hỏi thường gặp về trường THPT NGÔ THỜI NGHIỆMNGHIỆM. Nếu bạn có thêm thắc mắc, vui lòng liên hệ với chúng
+            tôi qua mục "Góp Ý".</p>
+
+        <div class="faq">
+            <div class="item">
+                <h3>Trường THPT THPT NGÔ THỜI NHIỆM được thành lập khi nào?</h3>
+                <p>​Trường THPT Ngô Thời Nhiệm được thành lập vào năm 1997 với cơ sở đầu tiên là Trường Tiểu học Dân lập Ngô Thời Nhiệm và Trường THCS Ngô Thời Nhiệm. Đến năm 2022, hệ thống trường đã tổ chức lễ kỷ niệm 25 năm thành lập và phát triển.</p>
+            </div>
+            <div class="item">
+                <h3>Điều kiện tuyển sinh vào trường là gì?</h3>
+                <p>Học sinh cần tốt nghiệp THCS và tham gia kỳ thi tuyển sinh do Sở Giáo dục và Đào tạo Sóc Trăng tổ
+                    chức. Điểm xét tuyển sẽ dựa trên kết quả thi và học bạ.</p>
+            </div>
+            <div class="item">
+                <h3>Trường có các hoạt động ngoại khóa nào?</h3>
+                <p>Trường tổ chức nhiều hoạt động ngoại khóa như văn nghệ, thể thao, câu lạc bộ tiếng Anh, và các buổi
+                    tham quan dã ngoại để phát triển kỹ năng toàn diện cho học sinh.</p>
+            </div>
+            <div class="item">
+                <h3>Làm thế nào để liên hệ với trường?</h3>
+                <p>Bạn có thể liên hệ qua email <strong>thptntnntn@gmail.com</strong> hoặc số điện thoại <strong>0299
+                        123 4567</strong>. Ngoài ra, bạn cũng có thể gửi góp ý qua mục "Góp Ý" trên website.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript để xử lý mở rộng/thu gọn các câu hỏi
+        document.querySelectorAll('.item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+
+                // Đóng tất cả các mục khác
+                document.querySelectorAll('.item').forEach(i => {
+                    i.classList.remove('active');
+                });
+
+                // Nếu mục này chưa được mở, mở nó
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
